@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap");
+
+/* ExtraLight: 200
+Light: 300
+Regular: 400
+SemiBold: 600
+Bold: 700 */
+
+:root {
+  --grey: rgb(220, 213, 213);
+  --orange: rgb(253, 152, 20);
+  --white: rbg(255, 255, 255);
+  --rich-black: 	#00171F;
+  --prussian-blue: #003459;
+  --cerulean: #007EA7;
+  --picton-blue: #00A8E8;
+  
+ 
+}
+
+
+
+.sticky {
+  background-color: transparent;
+  color: black;
+}
+
+body{
+
+  background-color: var(--rich-black);
+
+}
+
+
+
+
+
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  filter: brightness(60%);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: 250ms;
+  z-index: 2;
+}
+
+.nav-links {
+  position: absolute;
+  left: 0;
+  top: 5vh;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: menu_animations 500ms ease-in;
+}
+
+.show-navlinks {
+  display: flex;
+}
+
+@keyframes menu_animations {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--grey);
+  transition: 250ms;
+  font-family: "Titillium Web", sans-serif;
+}
+
+header ul li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: var(--grey);
+  transition: 250ms;
+  font-family: "Titillium Web";
+  font-weight: 600;
+}
+
+header ul li a:hover {
+  color: var(--orange);
+}
+
+
+
+
+
+
+
+
+
+.hamburger-on {
+  background: url(../images/bar1.svg);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+
+  filter: brightness(0) invert(1);
+}
+
+.hamburger-off {
+  padding: 9px;
+  background: url(../images/xmark-solid.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (min-width: 700px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+
+  header ul {
+    display: flex;
+  }
+
+  header ul li {
+    margin: 0;
+  }
+
+  header ul li a {
+    padding: 0;
+    margin: 5px 37px;
+    font-size: 0.9em;
+  }
+
+  .hamburger-on {
+    display: none;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+}
+
+.homepage{
+  color: white;
+  text-align: center;
+
+  position: relative;
+  top: 250px;
+}
+
+.buttons{
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+
+}
+.buttons button{
+  /* width: 11%; */
+
+  width: 200px;
+
+  border-radius: 20px;
+
+  margin-top: 20px;
+  height: 40px;
+
+  border: none;
+
+  background-color: var(--cerulean);
+
+  color: var(--grey);
+
+
+  text-decoration: none;
+
+
+  transition: background-color .5s ease-out;
+
+  
+}
+
+#page-container {
+  margin-top: 50px;
+  position: relative;
+
+  background-color: var(--prussian-blue);
+
+  top: 515px;
+
+  font-size: 1.2rem;
+
+  text-align: center;
+
+
+}
+
+
+.LoginMain {
+
+
+  display: grid;
+  place-items: center;
+  width: 45%;
+  position: relative;
+  top: 150px;
+  left: 27.5%;
+  background: rgb(9,51,106);
+  background: linear-gradient(131deg, rgba(9,51,106,1) 0%, rgba(0,52,89,1) 35%, rgba(0,126,167,1) 100%);
+  height: 60vh;
+  opacity: 90%;
+  backdrop-filter: blur(2px);
+ }
+
+
+.form-group i{
+  display: flex;
+  justify-content: end;
+  justify-items: end;
+
+  position: relative;
+
+  top: -25px;
+
+  right: 5px;
+
+  
+
+
+
+}
+
+.linkToLogin{
+  margin-top: 4%;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.TaskPage{
+  text-align: center;
+  color: white;
+}
+
+.linkToLogin > a{
+
+  color: var(--orange)
+}
+
+.linkToLogin > a:hover{
+
+  color: rgb(203, 118, 7);
+}
+form{
+
+
+  opacity: 90%;
+
+  backdrop-filter: blur(2px);
+  width: 400px;
+
+  border-radius: 20px;
+
+  
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 886px) {
+  form{
+    width: 300px;
+  }
+}
+
+form label{
+  margin-top: 20px;
+  color: var(--grey)
+}
+
+
+
+form button{
+  margin-top: 20px;
+
+  width: 100%;
+
+
+  background-color: var(--cerulean);
+
+  border: none;
+
+  height: 40px;
+
+  color: white;
+
+  border-radius: 17px;
+
+
+  transition: background-color .5s ease-out;
+
+
+
+}
+
+form button:hover{
+  background-color: var(--prussian-blue);
+}
+
+#content-wrap {
+  position: relative;
+  top: 18px;
+  padding-bottom: 2.5rem;   
+  
+  color: white;
+}
+
+#footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 2rem; 
+  color: var(--gray)
+             /* Footer height */
+}
+
+.buttons button a:visited{
+  color: var(--gray);
+  text-decoration: none;
+
+}
+
+.buttons button a{
+  text-decoration: none;
+
+}
+
+.buttons button:hover{
+  background-color: var(--prussian-blue);
+
+  cursor: pointer;
+}
+
+
+
+
+
+

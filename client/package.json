@@ -1,0 +1,47 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "proxy": "http://localhost:5000",
+  "private": true,
+  "packages": {
+    "": {
+      "name": "client",
+      "version": "0.1.0"
+    }
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    "@auth-kit/react-router": "^3.0.2-alpha.19",
+    "axios": "^1.6.5",
+    "react-auth-kit": "^3.0.2-alpha.19",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.21.1",
+    "react-scripts": "^5.0.1"
+  }
+}
